@@ -37,14 +37,15 @@ This section outlines analysis pipelines, image processing workflows, and data i
 
 ## 📁 Data Storage
 
-- **S3 Bucket**: `s3://gbm.store.genome.sg`
-- **GIS R Drive**: `S:\GIS-Liujy\Vitkauskas_Matas`
+- **S3 Bucket** for data (Need private keys to access): `s3://gbm.store.genome.sg`
+- **GIS R Drive** for slides (Need GIS VPN to access): `S:\GIS-Liujy\Vitkauskas_Matas`
 
 ---
 ## 📦 GitHub Repositories
 
 - **[GBM](https://github.com/matasV99/GBM)**  
   Image processing, segmentation, spot calling, and graph-based clustering pipelines for glioblastoma spatial transcriptomics.
+- Backup of the main GBM analysis script can be found on the GIS R Drive: `S:\GIS-Liujy\Vitkauskas_Matas\script_GBM_analysis_MV`
 
 ---
 

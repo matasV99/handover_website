@@ -29,9 +29,8 @@ This section covers all PD-related computational work, including MERFISH, scRNA-
 
 ## 📁 Data Storage
 
-- **S3 Bucket** (Need private keys to access): `s3://test.store.genome.sg`
-- **GIS R Drive** 
-(Need GIS VPN to access): `S:\GIS-Liujy\Vitkauskas_Matas`
+- **S3 Bucket** for data (Need private keys to access): `s3://test.store.genome.sg`
+- **GIS R Drive** for slides (Need GIS VPN to access): `S:\GIS-Liujy\Vitkauskas_Matas`
 
 See `Data_Storage.md`  for detailed structure.
 
@@ -40,6 +39,7 @@ See `Data_Storage.md`  for detailed structure.
 
 - **[PD_project_analysis](https://github.com/matasV99/PD_project_analysis)**  
 scRNA-seq and MERFISH analysis pipelines for PD midbrain organoids and KO models.
+- Backup of the publication scripts can be found on the GIS R drive: `S:\GIS-Liujy\Vitkauskas_Matas\PD_manuscript_scripts\`.
 
 ---
 

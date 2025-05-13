@@ -1,0 +1,14 @@
+# Go to Windows Command Prompt and open or download miniconda
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe
+start /wait "" .\miniconda.exe /S
+del .\miniconda.exe
+
+# https://www.mkdocs.org/getting-started/
+# open Anaconda prompt and install Mkdocs
+pip install mkdocs
+
+# navigate to this folder
+cd YOURPATH/handover_mv
+
+# deploy the website locally
+mkdocs serve
