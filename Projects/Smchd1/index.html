@@ -127,7 +127,7 @@
 <ul>
 <li><strong>scRNA-seq</strong>:<ul>
 <li>pooled scRNAseq dataset at day X of Smchd1 heterozygous and Smchd1 homozygous. Cell Ranger aligned, and cell types labeled by: Matas Vitkauskas.</li>
-<li>Final peprocessed object: [INSERT PATH TO FINAL OBJECT IN S3 BUCKET]</li>
+<li>Final peprocessed object: <code>s3://gbm.store.genome.sg/Smchd1_project/scRNAseq_analysis/final_smchd1_combined_prepped</code></li>
 </ul>
 </li>
 </ul>
@@ -137,20 +137,26 @@
 <li>Too few germ cells to find resilience markers at day X.</li>
 <li>Sertoli and Myoid cells show a resilience pattern, although not sure if this is useful for collaborator project.</li>
 <li>We recapitulate known cell-cell signaling patterns: a) ACTIVIN + KIT signaling between Sertoli and germ cells (stem cell self-renewal/differentiation balance), b) BMP signaling - leydig cells and germ cells (testosterone production).</li>
+<li>TE analysis where transposable elements are quantified from .bam files does not yield interesting insights.</li>
 </ol>
 <hr />
 <h2 id="data-storage">📁 Data Storage</h2>
 <ul>
-<li><strong>S3 Bucket</strong> (Need private keys to access): <code>s3://matas.store.genome.sg/Matas_Vitkauskas_scRNAseq_Smchd1mouse</code></li>
-<li><strong>GIS R Drive</strong> (Need GIS VPN to access): <code>S:\GIS-Liujy\Vitkauskas_Matas</code></li>
+<li><strong>S3 Bucket</strong> for data (Need private keys to access): <code>s3://gbm.store.genome.sg/Smchd1_project/</code></li>
+<li><strong>GIS R Drive</strong> for slides (Need GIS VPN to access): <code>S:\GIS-Liujy\Vitkauskas_Matas</code></li>
 </ul>
 <p>See <code>Data_Storage.md</code>  for detailed structure.</p>
 <hr />
 <h2 id="smchd1-analysis-master-script">📦 Smchd1 analysis master script</h2>
 <ul>
-<li><strong>A single R file</strong> 
-                - scRNA-seq (Seurat) and CellChat analysis of smchd1 mutation efects in mouse testes.
-                - <code>S:\GIS-Liujy\Vitkauskas_Matas\script_Smcdh1_analysis_MV.R</code></li>
+<li><strong>A single R file</strong> <ul>
+<li>scRNA-seq (Seurat) and CellChat analysis of smchd1 mutation efects in mouse testes. Can be found in two locations:<ul>
+<li><code>S:\GIS-Liujy\Vitkauskas_Matas\script_Smchd1_analysis_MV.R</code></li>
+<li><code>s3://gbm.store.genome.sg/Smchd1_project/scRNAseq_analysis/script_Smchd1_analysis_MV.R</code></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="collaborators">🧑‍🔬 Collaborators</h2>
