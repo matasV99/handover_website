@@ -101,7 +101,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#3-gis-r-drive" class="nav-link">3. 💿 GIS R-Drive</a>
+            <li class="nav-item" data-bs-level="2"><a href="#3-ncbi-geo-accession" class="nav-link">3. 🎰 NCBI GEO accession</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-gis-r-drive" class="nav-link">4. 💿 GIS R-Drive</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -114,32 +118,45 @@
 
 <h1 id="data-storage">🗂️ Data Storage</h1>
 <h2 id="1-aws-s3-buckets">1. 💻 AWS S3 Buckets</h2>
-<p>PD-related datasets are stored in the <strong>test S3 bucket</strong>. GBM-related datasets are stored in the <strong>GBM S3 bucket</strong>. Naming conventions are outlined in the <code>.README</code> file (see below).</p>
+<p>PD-related datasets are stored in the <strong>test S3 bucket</strong>. GBM-related datasets are stored in the <strong>GBM S3 bucket</strong>. Smchd1-related datasets are stored in the <strong>GBM S3 bucket</strong> as it was too big to be placed in GIS R Drive (~140 Gb). Naming conventions are outlined in <code>.README</code> file (see below).</p>
 <h3 id="bucket-readme-summary">🧾 Bucket README Summary</h3>
 <ul>
 <li>[author]<em>[technique]</em>[subject]</li>
 <li>E.g., <code>Xie_Jessica_scRNAseq_merFISH_WT_DJ1KO</code></li>
 <li>Contains raw fastq, aligned Cell Ranger outputs, raw TIFs, and segmentation masks.</li>
 </ul>
-<p>📄 Full README from the S3 bucket [TBD]:</p>
+<p>📄 Full README from the S3 bucket [TBD: Still working on reordering s3 buckets]:</p>
 <ul>
-<li><a href="../test_s3_README.txt">See <code>test_s3_README.txt</code></a></li>
-<li><a href="gbm_s3_README.txt">See <code>GBM_s3_README.txt</code></a></li>
+<li><a href="../test_s3_README.txt">See <code>PD_s3_README</code></a></li>
+<li><a href="../gbm_s3_README.txt">See <code>GBM_s3_README</code></a></li>
+<li><a href="../smchd1_RDrive_README.txt">See <code>Smchd1_README</code></a></li>
 </ul>
 <h3 id="bucket-access-keys">🔑 Bucket Access Keys</h3>
 <blockquote>
 <p>(Omitted here — should be found within a .txt file in R drive here: S:\GIS-Liujy\Vitkauskas_Matas\s3_keys.txt)</p>
 </blockquote>
 <h2 id="2-ronin-aws-virtual-machine-packages">2. 🤖 Ronin AWS virtual machine packages</h2>
-<p>Virtual machines that can be found on lab's Ronin AWS website: RNASEQ &gt; New_Machine &gt; Search_Packages:
-- PopV - for consensus cell label transfer (CUDA set-up).
-- Kallisto-scVelo - for rapid transcript pseudo-quantifiation using kallisto and all the necessary packages to run scVelo for RNA velocity analysis.
-- Cellpose - for cell segmentation using Cellpose.
-- Matas - to replicate PD and GBM project environments.</p>
-<h2 id="3-gis-r-drive">3. 💿 GIS R-Drive</h2>
-<p>Path: <code>R:/Projects/Neurogenomics/Matas/</code>
-- Archived Smchd1 data.
-- Archived Slides for PD, GBM, Smchd1 and Miscellaneous on day 2025_05_05.</p></div>
+<p>Virtual machines that can be found on lab's Ronin AWS website: RNASEQ &gt; New_Machine &gt; Search_Packages:</p>
+<ul>
+<li>PopV - for consensus cell label transfer (CUDA set-up).</li>
+<li>Kallisto-scVelo - for rapid transcript pseudo-quantifiation using kallisto and all the necessary packages to run scVelo for RNA velocity analysis.</li>
+<li>Cellpose - for cell segmentation using Cellpose.</li>
+<li>Matas - to replicate PD and GBM project environments.</li>
+</ul>
+<h2 id="3-ncbi-geo-accession">3. 🎰 NCBI GEO accession</h2>
+<p>Multi-modal data from PD project is currently private (scheduled to be publicly available on Jun 25, 2028 or following publication of the PD manuscript):</p>
+<ul>
+<li>GSE271115 [RNAseq]: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271115</li>
+<li>GSE271116 [scRNAseq]: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271116</li>
+<li>GSE271118 [MERFISH]: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271118</li>
+</ul>
+<h2 id="4-gis-r-drive">4. 💿 GIS R-Drive</h2>
+<p>Path: <code>S:\GIS-Liujy\Vitkauskas_Matas</code></p>
+<ul>
+<li>Archived Slides for PD, GBM, Smchd1 and Miscellaneous on day 2025_05_05.</li>
+<li>Archived s3 bucket keys, NCBI GEO reviewer keys.</li>
+<li>PD Manuscript code backup, GBM, and Smchd1 main script backup (25_05_13 upload).</li>
+</ul></div>
             </div>
         </div>
 

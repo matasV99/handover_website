@@ -12,7 +12,7 @@ All presentation slides are zipped and stored within the relevant project direct
 - `Summary_slides/` – Finalized figures and summarized results for quick review for the publication
 - `Draft_slides/` – Matas' draft slides that might contain some caveats regarding specific analyses
 - `Meeting_slides/` – Some of the biweekly progress update slides
-
+- Key slide deck: `S:\GIS-Liujy\Vitkauskas_Matas\PD_slides_MV_25_05_05\MLO paper Summary (thesis-like)`
 ---
 
 ## 🧠 Glioblastoma (GBM)
@@ -22,7 +22,7 @@ All presentation slides are zipped and stored within the relevant project direct
 ### Folder Structure:
 - `Draft_slides/` – Matas' draft slides that might contain some caveats regarding specific analyses
 - `Summary_slides/` – Meeting slides
-
+- Key slide deck: `S:\GIS-Liujy\Vitkauskas_Matas\GBM_slides_MV_25_05_05\25_04_21 GBM collaborator #2 meeting [shorter]`
 ---
 
 ## 🧬 Structural Maintenance Of Chromosomes Flexible Hinge Domain Containing 1 (Smchd1)
@@ -33,7 +33,7 @@ All presentation slides are zipped and stored within the relevant project direct
 - `QC_Slides/` – Spot calling quality control
 - `Cluster_analysis/` – Downstream marker and identity presentations
 - `Manuscript_figures/` – Figures formatted for submission
-
+- Key slide deck: `S:\GIS-Liujy\Vitkauskas_Matas\Smchd1_slides_MV_25_05_05\25/02/07 Angie CellChat update`
 ---
 
 ## ❓ Miscellaneous slides
