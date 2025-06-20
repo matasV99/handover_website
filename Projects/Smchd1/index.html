@@ -50,7 +50,7 @@
                                 <a href="./" class="nav-link active" aria-current="page">Smchd1</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../Data_Storage/" class="nav-link">Data storage</a>
+                                <a href="../Masmr/" class="nav-link">Masmr</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../../Slides/" class="nav-link">Slides</a>
@@ -69,7 +69,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../Data_Storage/" class="nav-link">
+                                <a rel="next" href="../Masmr/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -91,7 +91,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#smchd1-mutation-projects" class="nav-link">🧬 smchd1 mutation Projects</a>
+            <li class="nav-item" data-bs-level="1"><a href="#structural-maintenance-of-chromosomes-flexible-hinge-domain-containing-1-smchd1-project" class="nav-link">🧬 Structural Maintenance Of Chromosomes Flexible Hinge Domain Containing 1 (Smchd1) Project</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#key-datasets" class="nav-link">🔍 Key Datasets</a>
               <ul class="nav flex-column">
@@ -120,21 +120,21 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="smchd1-mutation-projects">🧬 smchd1 mutation Projects</h1>
+<h1 id="structural-maintenance-of-chromosomes-flexible-hinge-domain-containing-1-smchd1-project">🧬 Structural Maintenance Of Chromosomes Flexible Hinge Domain Containing 1 (Smchd1) Project</h1>
 <p>This section covers all smchd1-related computational work on scRNAseq dataset of mouse testes with Dr. Shifeng Xue's lab.</p>
 <hr />
 <h2 id="key-datasets">🔍 Key Datasets</h2>
 <ul>
 <li><strong>scRNA-seq</strong>:<ul>
-<li>pooled scRNAseq dataset at day X of Smchd1 heterozygous and Smchd1 homozygous. Cell Ranger aligned, and cell types labeled by: Matas Vitkauskas.</li>
-<li>Final peprocessed object: <code>s3://gbm.store.genome.sg/Smchd1_project/scRNAseq_analysis/final_smchd1_combined_prepped</code></li>
+<li>pooled scRNAseq dataset at P4 of Smchd1 heterozygous and Smchd1 homozygous. Cell Ranger aligned, and cell types labeled by: Matas Vitkauskas.</li>
+<li>Final peprocessed object: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_scRNAseq_Smchd1_project\scRNAseq_analysis/final_smchd1_combined_prepped</code></li>
 </ul>
 </li>
 </ul>
 <hr />
 <h2 id="analysis-highlights">🧠 Analysis Highlights</h2>
 <ol>
-<li>Too few germ cells to find resilience markers at day X.</li>
+<li>Too few germ cells to find resilience markers at P4.</li>
 <li>Sertoli and Myoid cells show a resilience pattern, although not sure if this is useful for collaborator project.</li>
 <li>We recapitulate known cell-cell signaling patterns: a) ACTIVIN + KIT signaling between Sertoli and germ cells (stem cell self-renewal/differentiation balance), b) BMP signaling - leydig cells and germ cells (testosterone production).</li>
 <li>TE analysis where transposable elements are quantified from .bam files does not yield interesting insights.</li>
@@ -142,19 +142,15 @@
 <hr />
 <h2 id="data-storage">📁 Data Storage</h2>
 <ul>
-<li><strong>S3 Bucket</strong> for data (Need private keys to access): <code>s3://gbm.store.genome.sg/Smchd1_project/</code></li>
-<li><strong>GIS R Drive</strong> for slides (Need GIS VPN to access): <code>S:\GIS-Liujy\Vitkauskas_Matas</code></li>
+<li><strong>Raw data</strong> (only aligned CellRanger data was provided by colllaborators): <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_scRNAseq_Smchd1_project\scRNAseq_analysis\CellRanger_data</code></li>
+<li><strong>Processed data</strong>: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_MLO_scRNAseq_MERFISH_analysis</code></li>
+<li><strong>Slides</strong>: <code>S:\GIS-Liujy\Vitkauskas_Matas\Smchd1_slides_MV_25_05_05</code></li>
 </ul>
-<p>See <code>Data_Storage.md</code>  for detailed structure.</p>
 <hr />
 <h2 id="smchd1-analysis-master-script">📦 Smchd1 analysis master script</h2>
 <ul>
 <li><strong>A single R file</strong> <ul>
-<li>scRNA-seq (Seurat) and CellChat analysis of smchd1 mutation efects in mouse testes. Can be found in two locations:<ul>
-<li><code>S:\GIS-Liujy\Vitkauskas_Matas\script_Smchd1_analysis_MV.R</code></li>
-<li><code>s3://gbm.store.genome.sg/Smchd1_project/scRNAseq_analysis/script_Smchd1_analysis_MV.R</code></li>
-</ul>
-</li>
+<li>scRNA-seq (Seurat) and CellChat analysis of smchd1 mutation efects in mouse testes: <code>S:\GIS-Liujy\Vitkauskas_Matas\script_Smchd1_analysis_MV.R</code></li>
 </ul>
 </li>
 </ul>

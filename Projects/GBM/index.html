@@ -50,7 +50,7 @@
                                 <a href="../Smchd1/" class="nav-link">Smchd1</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../Data_Storage/" class="nav-link">Data storage</a>
+                                <a href="../Masmr/" class="nav-link">Masmr</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../../Slides/" class="nav-link">Slides</a>
@@ -91,7 +91,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#glioblastoma-gbm-projects" class="nav-link">🧬 Glioblastoma (GBM) Projects</a>
+            <li class="nav-item" data-bs-level="1"><a href="#glioblastoma-gbm-project" class="nav-link">🧬 Glioblastoma (GBM) Project</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#key-datasets" class="nav-link">🧪 Key Datasets</a>
               <ul class="nav flex-column">
@@ -102,6 +102,10 @@
               </ul>
             </li>
             <li class="nav-item" data-bs-level="2"><a href="#data-storage" class="nav-link">📁 Data Storage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ronin-aws-virtual-machine-packages" class="nav-link">🤖 Ronin AWS virtual machine packages</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -120,24 +124,24 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="glioblastoma-gbm-projects">🧬 Glioblastoma (GBM) Projects</h1>
+<h1 id="glioblastoma-gbm-project">🧬 Glioblastoma (GBM) Project</h1>
 <p>This section outlines analysis pipelines, image processing workflows, and data integration for spatial transcriptomics of GBM tissue.</p>
 <hr />
 <h2 id="key-datasets">🧪 Key Datasets</h2>
 <ul>
 <li><strong>CosMx spatial profiling</strong>:<ul>
-<li>dataset of 4 patients (core vs edge) (FAILED NOT Edgy enough).</li>
+<li>dataset of 4 patients (core vs edge). 1 patient contains putatively "healthy infiltrated cortex" totaling 6 FOVs, but these are not enriched in NPC-like cells or neurons.</li>
 <li>940 genes x ~250k cells.</li>
 <li>3 protein stains: CD68, PanCK, CD45.</li>
-<li>Final peprocessed object: [INSERT PATH TO FINAL OBJECT IN S3 BUCKET]</li>
+<li>Final peprocessed object: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_CosMx_GBM_project\CosMx_analysis\GBMap_clustering\labeled_object</code></li>
 </ul>
 </li>
 <li><strong>Matched H&amp;E-stained slides</strong>:<ul>
-<li>For homeodomain analysis (???).</li>
+<li>Slides annotated by a trained pathologist can be found here: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_CosMx_GBM_project\Matching_stains\H&amp;E stains (high res + annotation)</code></li>
 </ul>
 </li>
 <li><strong>Matched CEP7-stained slides</strong>:<ul>
-<li>Matched CEP7-stained slides for neoplastic status determination (FAILED too far away).</li>
+<li>Matched CEP7-stained slides for neoplastic status determination. Slices are too far away from CosMx.</li>
 </ul>
 </li>
 </ul>
@@ -150,14 +154,14 @@
 </li>
 <li><strong>Cell typing</strong>:<ul>
 <li>Graph-based clustering and subclustering of mixed clusters. Main datasets used: Neftel et al 2019, Ruiz-Moreno et al 2022, and Harwood et al 2024. Majority label picked from 3 annotators: Matas &amp; Quyen, Yuk Kien, Wisna.</li>
-<li>FAILED: neoplastic vs non-neoplastic label transfer using GBMap.</li>
+<li>FAILED (too few genes in CosMx panel): neoplastic vs non-neoplastic label transfer using GBMap.</li>
 </ul>
 </li>
 <li><strong>Downstream</strong>:<ul>
-<li>Differential gene expression between core and edge samples.</li>
-<li>Cell-cell signaling and ligand-receptor analysis using CellChat weighted based on distance between cells.</li>
+<li>Differential gene expression between core and edge samples. No enrichment in NPC-like cells found in edge samples, possibly due to bulk nature of labeling samples.</li>
+<li>Cell-cell signaling and ligand-receptor analysis using CellChat weighted based on distance between cells. Find strong SPP1 and VEGFA signaling between MES-like cells and TAM-BDM, and endothelial cells respectively.</li>
 <li>Spatial co-localization analysis per slide.</li>
-<li>H&amp;E annotations manually transferred after a manual affine transformation.</li>
+<li>H&amp;E annotations manually transferred after a manual affine transformation. No new insights based on H&amp;E annotations.</li>
 <li>popV consensus based label transfer failed due to low number of genes not being able to label transcriptionally homogeneous GBM cells.</li>
 </ul>
 </li>
@@ -165,9 +169,15 @@
 <hr />
 <h2 id="data-storage">📁 Data Storage</h2>
 <ul>
-<li><strong>S3 Bucket</strong> for data (Need private keys to access): <code>s3://gbm.store.genome.sg</code></li>
-<li><strong>GIS R Drive</strong> for slides (Need GIS VPN to access): <code>S:\GIS-Liujy\Vitkauskas_Matas</code></li>
+<li><strong>Raw data</strong>: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_CosMx_GBM_project\Raw_CosMx</code></li>
+<li><strong>Processed data</strong>: <code>S:\GIS-Liujy\Vitkauskas_Matas\Vitkauskas_Matas_CosMx_GBM_project\CosMx_analysis</code></li>
+<li><strong>Slides</strong>: <code>S:\GIS-Liujy\Vitkauskas_Matas\GBM_slides_MV_25_05_05</code></li>
 </ul>
+<hr />
+<h2 id="ronin-aws-virtual-machine-packages">🤖 Ronin AWS virtual machine packages</h2>
+<p>The Ronin AWS virtual machine project packages can be found at Neuromics-PD &gt; New Machine &gt; Project Packages:
+- PopV - for consensus cell label transfer (CUDA set-up).
+- Matas - to replicate PD and GBM project environments.</p>
 <hr />
 <h2 id="github-repositories">📦 GitHub Repositories</h2>
 <ul>
